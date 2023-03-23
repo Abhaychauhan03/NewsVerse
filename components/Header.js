@@ -15,10 +15,10 @@ function Header({ change }) {
   };
   return (
     <div>
-      <header className="sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md p-4 md:px-10">
+      <header className="sticky top-0 z-50 flex justify-between items-center bg-white shadow-md p-4 md:px-10">
         <div
           onClick={handleClick}
-          className="relative flex items-center h-5 cursor-pointer my-auto"
+          className="relative flex items-center w-36 h-5 cursor-pointer"
         >
           <Image
             src="/logo.png"
@@ -30,7 +30,7 @@ function Header({ change }) {
             }}
           />
         </div>
-        <div>
+        <div className="w-1/3">
           <Search handleQueryChange={change} />
         </div>
         <div className="flex items-center space-x-4 justify-end text-gray-500">

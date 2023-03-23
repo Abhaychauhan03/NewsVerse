@@ -29,6 +29,14 @@ export default function Article({ article }) {
               Click to visit news website
             </button>
           </Link>
+          <h3 className="font-semibold">
+            <span className="text-red-500">Note:-</span>Full Content is not
+            provided by the API. But after searching, I found that we could
+            scrap it from the news url, But every website has its own DOM
+            structure, So it could be implemented by taking two or three news
+            websites, But search results will be limited to these only, So
+            provided the link to visit the news post URL.
+          </h3>
         </div>
       </div>
     </>

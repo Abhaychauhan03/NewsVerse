@@ -99,7 +99,7 @@ export default function Home() {
             )}
           </div>
           {articles.map((article) => (
-            <div className="m-8 ml-10 pr-32 flex" key={article.url}>
+            <div className="border-b-2 p-6 ml-10 pr-32 flex" key={article.url}>
               <div className="relative w-full max-w-[260px] h-40 my-auto mr-10">
                 <Image
                   src={
@@ -115,7 +115,7 @@ export default function Home() {
                 <h2 className="font-bold">{article.title}</h2>
                 <Link
                   href={{
-                    pathname: `/article/${article.title}`,
+                    pathname: `/article/post`,
                     query: { ...article },
                   }}
                 >
