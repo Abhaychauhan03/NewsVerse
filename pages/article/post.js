@@ -8,15 +8,17 @@ export default function Article({ article }) {
       <Header />
       <div className="flex h-screen p-8 px-32 space-x-16">
         <div className="flex-grow w-full">
-          <div className="relative w-full max-w-[720px] h-full max-h-[400px]">
+          <div className="relative">
             <Image
               src={
                 article.urlToImage
                   ? article.urlToImage
                   : "https://letusstudy.in/clientside/images/no-image.png"
               }
-              layout="fill"
+              width={720}
+              height={200}
               style={{ objectFit: "cover" }}
+              alt="image-article"
             />
           </div>
         </div>

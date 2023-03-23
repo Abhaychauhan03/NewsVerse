@@ -100,15 +100,17 @@ export default function Home() {
           </div>
           {articles.map((article) => (
             <div className="border-b-2 p-6 ml-10 pr-32 flex" key={article.url}>
-              <div className="relative w-full max-w-[260px] h-40 my-auto mr-10">
+              <div className="relative my-auto mr-10">
                 <Image
                   src={
                     article.urlToImage
                       ? article.urlToImage
                       : "https://letusstudy.in/clientside/images/no-image.png"
                   }
-                  layout="fill"
+                  width={260}
+                  height={40}
                   style={{ objectFit: "fill" }}
+                  alt="image-article"
                 />
               </div>
               <div className="">
@@ -149,6 +151,7 @@ export default function Home() {
                 if (startPage <= i + 1 && endPage >= i + 1) {
                   return (
                     <span
+                      key={i}
                       onClick={() => handleSelectPage(i + 1)}
                       className={`px-4 py-3 cursor-pointer border ${
                         i + 1 == page ? "bg-gray-300" : ""

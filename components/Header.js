@@ -22,12 +22,14 @@ function Header({ change }) {
         >
           <Image
             src="/logo.png"
-            layout="fill"
+            width={130}
+            height={40}
             style={{
               objectPosition: "left",
               objectFit: "contain",
-              layout: "fill",
             }}
+            priority={true}
+            alt="image-logo"
           />
         </div>
         <div className="w-1/3">
